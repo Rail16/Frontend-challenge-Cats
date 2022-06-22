@@ -1,0 +1,132 @@
+/* Обнуление */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	background: #fafafa;
+	font-size: 14px;
+	color: #252b42;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*----------------BEGIN----------------------*/
+.main__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.7);
+}
+.main__header {
+    padding: 0 62px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+    display: flex;
+    align-items: center;
+}
+.main__header >div {
+    padding: 23px;
+}
+.main__header >div:hover {
+    cursor: pointer;
+}
+.header__active {
+    padding: 23px;
+    background: #1E88E5;
+    color: #FFFFFF;
+}
+.all__cats {
+}
+.favourite__cats {
+}
+#heart { 
+    position: relative; 
+    width: 100px; 
+    height: 90px; 
+} 
+
+#heart:before, #heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 50px; 
+    top: 0; 
+    width: 50px; 
+    height: 80px; 
+    /* background: red; */
+    border: 2px red solid; 
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+#heart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
+.main__body {
+    margin: 52px 62px 48px;
+}
+.cat__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 48px;
+}
+.cat__items-favourite {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 48px;
+}
+.cat__item {
+    position: relative;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+.cat__item img{
+    width: 225px;
+    height: 225px;
+}
+.heart {
+    position: absolute;
+}
+.cat__item:hover {
+    transition: 0.4s;
+    transform: scale(1.13);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+}
+.load__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+    color: black;
+}
+.load__more:hover {
+    cursor: pointer;
+}
